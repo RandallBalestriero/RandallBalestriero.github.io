@@ -102,7 +102,7 @@
               <hr>
               <img src="docs/assets/image_hull.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Two ICASSP 2022 papers</h5>
+                <h6 class="card-title">Two ICASSP 2022 papers</h6>
                 <p class="card-text">
                   <a href="#" data-toggle="modal" data-target="#modalICASSP" class="p-1">
                     Abstract
@@ -112,50 +112,45 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-header">
                       <h5 class="modal-title">
-                        MaGNET: Uniform Sampling from Deep Generative Network Manifolds Without Retraining
+                        No More Than 6ft Apart: Robust K-means via Radius Upper Bounds
                       </h5>
                     </div>
                     <div class="modal-content">
                       <div class="modal-body">
-                        Deep Generative Networks (DGNs) are extensively employed in Generative Adversarial Networks
-                        (GANs), Variational Autoencoders (VAEs), and their variants to approximate the data manifold,
-                        and data distribution on that manifold. However, training samples are often obtained based on
-                        preferences, costs, or convenience producing artifacts in the empirical data distribution e.g.
-                        the large fraction of smiling faces in the CelebA dataset or the large fraction of dark-haired
-                        individuals in FFHQ). {\em These inconsistencies will be reproduced when sampling from the
-                        trained DGN, which has far-reaching potential implications for fairness, data augmentation,
-                        anomaly detection, domain adaptation, and beyond.} In response, we develop a differential
-                        geometry based sampler -coined MaGNET- that, given any trained DGN, produces samples that are
-                        uniformly distributed on the learned manifold. We prove theoretically and empirically that our
-                        technique produces a uniform distribution on the manifold regardless of the training set
-                        distribution. We perform a range of experiments on various datasets and DGNs. One of them
-                        considers the state-of-the-art StyleGAN2 trained on FFHQ dataset, where uniform sampling via
-                        MaGNET increases distribution precision & recall by 4.12% & 3.01% and decreases gender bias by
-                        41.2%, without requiring labels or retraining.
+                        Centroid based clustering methods such as k-means, k-medoids and k-centers are heavily applied
+                        as a go-to tool in exploratory data analysis. In many cases, those methods are used to obtain
+                        {\em representative} centroids of the data manifold for visualization or summarization of a
+                        dataset. Real world datasets often contain inherent abnormalities, e.g., repeated samples and
+                        sampling bias, that manifest imbalanced clustering. We propose to remedy such a scenario by
+                        introducing a maximal radius constraint $r$ on the clusters formed by the centroids, i.e.,
+                        samples from the same cluster should not be more than $2r$ apart in terms of $\ell_2$ distance.
+                        % This novel K-means formulation produces centroids with space distribution robust to dataset
+                        inconsistencies.
+                        We achieve this constraint by solving a semi-definite program, followed by a linear assignment
+                        problem with quadratic constraints.
+                        Through qualitative results, we show that our proposed method is robust towards dataset
+                        imbalances and sampling artifacts. To the best of our knowledge, ours is the first constrained
+                        k-means clustering method with hard radius constraints.
                       </div>
                     </div>
                     <div class="modal-header">
                       <h5 class="modal-title">
-                        MaGNET: Uniform Sampling from Deep Generative Network Manifolds Without Retraining
+                        DeepHull: Fast Convex Hull Approximation in High Dimensions
                       </h5>
                     </div>
                     <div class="modal-content">
                       <div class="modal-body">
-                        Deep Generative Networks (DGNs) are extensively employed in Generative Adversarial Networks
-                        (GANs), Variational Autoencoders (VAEs), and their variants to approximate the data manifold,
-                        and data distribution on that manifold. However, training samples are often obtained based on
-                        preferences, costs, or convenience producing artifacts in the empirical data distribution e.g.
-                        the large fraction of smiling faces in the CelebA dataset or the large fraction of dark-haired
-                        individuals in FFHQ). {\em These inconsistencies will be reproduced when sampling from the
-                        trained DGN, which has far-reaching potential implications for fairness, data augmentation,
-                        anomaly detection, domain adaptation, and beyond.} In response, we develop a differential
-                        geometry based sampler -coined MaGNET- that, given any trained DGN, produces samples that are
-                        uniformly distributed on the learned manifold. We prove theoretically and empirically that our
-                        technique produces a uniform distribution on the manifold regardless of the training set
-                        distribution. We perform a range of experiments on various datasets and DGNs. One of them
-                        considers the state-of-the-art StyleGAN2 trained on FFHQ dataset, where uniform sampling via
-                        MaGNET increases distribution precision & recall by 4.12% & 3.01% and decreases gender bias by
-                        41.2%, without requiring labels or retraining.
+                        Computing or approximating the convex hull of a dataset plays a role in a wide range of
+                        applications, including economics, statistics, and physics, to name just a few.
+                        However, convex hull computation and approximation is exponentially complex, in terms of both
+                        memory and computation, as the ambient space dimension increases.
+                        In this paper, we propose DeepHull, a new convex hull approximation algorithm based on convex
+                        deep networks (DNs) with continuous piecewise-affine nonlinearities and nonnegative weights.
+                        The idea is that binary classification between true data samples and adversarially generated
+                        samples with such a DN naturally induces a polytope decision boundary that approximates the true
+                        data convex hull.
+                        A range of exploratory experiments demonstrates that DeepHull efficiently produces a meaningful
+                        convex hull approximation, even in a high-dimensional ambient space.
                       </div>
                       <div class="modal-footer text-center">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -174,7 +169,7 @@
             <div class="card h-60">
               <img src="docs/assets/image_magnet.png" class="card-img-top" alt="faces generation">
               <div class="card-body">
-                <h5 class="card-title">One ICLR 2022 paper</h5>
+                <h6 class="card-title">One ICLR 2022 paper</h6>
                 <p class="card-text text-center">
                   <a href="https://openreview.net/forum?id=r5qumLiYwf9" class="p-1">Link</a>
                   <a href="#" data-toggle="modal" data-target="#modalMAGNET" class="p-1">
@@ -223,7 +218,7 @@
             <div class="card h-60">
               <img src="docs/assets/image_mlst.png" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Invited for a Machine Learning Street Talk with Yann LeCun</h5>
+                <h6 class="card-title">Invited for a Machine Learning Street Talk with Yann LeCun</h6>
                 <p class="card-text text-center">
                   <a href="https://www.youtube.com/watch?v=86ib0sfdFtw">YouTube Link</a>
                 </p>
