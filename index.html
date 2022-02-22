@@ -10,6 +10,8 @@
   <script>
     $(document).ready(function () {
       $('#ICLR_magnet').load("cards/ICLR_magnet.html");
+      $('#ICASSP_2022').load("cards/ICASSP_2022.html");
+      $('#MLST').load("cards/MLST.html");
     });
   </script>
 
@@ -104,84 +106,13 @@
         <h1>Under construction...</h1>
         <div class="row row-cols-5">
           <div class="col">
-            <div class="card h-60">
-              <img src="docs/assets/image_kmeans.png" class="card-img-top" alt="...">
-              <hr>
-              <img src="docs/assets/image_hull.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h6 class="card-title">Two ICASSP 2022 papers</h6>
-                <p class="card-text">
-                  <a href="#" data-toggle="modal" data-target="#modalICASSP" class="p-1">
-                    Abstract
-                  </a>
-                </p>
-                <div class="modal fade" id="modalICASSP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <h5 class="modal-title">
-                        No More Than 6ft Apart: Robust K-means via Radius Upper Bounds
-                      </h5>
-                      <div class="modal-body">
-                        Centroid based clustering methods such as k-means, k-medoids and k-centers are heavily applied
-                        as a go-to tool in exploratory data analysis. In many cases, those methods are used to obtain
-                        {\em representative} centroids of the data manifold for visualization or summarization of a
-                        dataset. Real world datasets often contain inherent abnormalities, e.g., repeated samples and
-                        sampling bias, that manifest imbalanced clustering. We propose to remedy such a scenario by
-                        introducing a maximal radius constraint $r$ on the clusters formed by the centroids, i.e.,
-                        samples from the same cluster should not be more than $2r$ apart in terms of $\ell_2$ distance.
-                        % This novel K-means formulation produces centroids with space distribution robust to dataset
-                        inconsistencies.
-                        We achieve this constraint by solving a semi-definite program, followed by a linear assignment
-                        problem with quadratic constraints.
-                        Through qualitative results, we show that our proposed method is robust towards dataset
-                        imbalances and sampling artifacts. To the best of our knowledge, ours is the first constrained
-                        k-means clustering method with hard radius constraints.
-                      </div>
-                      <h5 class="modal-title">
-                        DeepHull: Fast Convex Hull Approximation in High Dimensions
-                      </h5>
-                      <div class="modal-body">
-                        Computing or approximating the convex hull of a dataset plays a role in a wide range of
-                        applications, including economics, statistics, and physics, to name just a few.
-                        However, convex hull computation and approximation is exponentially complex, in terms of both
-                        memory and computation, as the ambient space dimension increases.
-                        In this paper, we propose DeepHull, a new convex hull approximation algorithm based on convex
-                        deep networks (DNs) with continuous piecewise-affine nonlinearities and nonnegative weights.
-                        The idea is that binary classification between true data samples and adversarially generated
-                        samples with such a DN naturally induces a polytope decision boundary that approximates the true
-                        data convex hull.
-                        A range of exploratory experiments demonstrates that DeepHull efficiently produces a meaningful
-                        convex hull approximation, even in a high-dimensional ambient space.
-                      </div>
-                      <div class="modal-footer text-center">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated: 02/19/2022</small>
-              </div>
-            </div>
+            <div class="card h-60" id="ICASSP_2022"></div>
           </div>
           <div class="col">
             <div class="card h-60" id="ICLR_magnet"></div>
           </div>
           <div class="col">
-            <div class="card h-60">
-              <img src="docs/assets/image_mlst.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h6 class="card-title">Invited for a Machine Learning Street Talk with Yann LeCun</h6>
-                <p class="card-text text-center">
-                  <a href="https://www.youtube.com/watch?v=86ib0sfdFtw">YouTube Link</a>
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated: 02/19/2022</small>
-              </div>
-            </div>
+            <div class="card h-60" id="MLST"></div>
           </div>
           <div class="col">
             <div class="card h-60">
