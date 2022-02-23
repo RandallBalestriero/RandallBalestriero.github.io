@@ -15,8 +15,10 @@
       $('#MLST').load("cards/MLST.html");
       $('#preprint_interpolation').load("cards/preprint_interpolation.html");
       $('#preprint_inversion').load("cards/preprint_inversion.html");
-      $('[data-toggle="tooltip"]').tooltip()
     });
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   </script>
 
   <!-- FontAwesome icons for social media -->
@@ -151,8 +153,8 @@
         </button>
         <h3 class="text-center">Latest News...</h3>
         <div class="card-deck">
-          <div class="card h-60 m-0" id="preprint_DA"></div>
-          <div class="card h-60 m-0" id="ICASSP_2022"></div>
+          <div class="card h-60" id="preprint_DA"></div>
+          <div class="card h-60" id="ICASSP_2022"></div>
           <div class="card h-60" id="ICLR_magnet"></div>
           <div class="card h-60" id="MLST"></div>
           <div class="card h-60" id="preprint_interpolation"></div>
