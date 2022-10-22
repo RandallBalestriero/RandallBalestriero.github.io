@@ -20,8 +20,17 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
-
-
+  <!-- D3 graph plotting related scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-dispatch@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-quadtree@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-timer@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
+  <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="http://x3dom.org/x3dom/dist/x3dom-full.js"></script>
+  <script src="d3-x3dom-axis.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/dev/x3dom.css" />
   <!-- FontAwesome icons for social media -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -66,6 +75,18 @@
       background: #007bb5;
       color: white;
     }
+
+    /* .node {
+      cursor: pointer;
+      stroke: #3182bd;
+      stroke-width: 1.5px;
+    }
+
+    .link {
+      fill: none;
+      stroke: #9ecae1;
+      stroke-width: 1.5px;
+    } */
   </style>
 </head>
 
@@ -109,8 +130,37 @@
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
-      <div class="col-9">
-        <h3 class="text-center">Research Interests</h3>
+      <div class="col-9" id="main">
+        <div id="intro" style="text-align: justify;width: 100%;padding: 2%;">
+          I have been doing research in learnable signal processing since 2013, in particular with learnable
+          parametrized
+          wavelets [<a href="https://proceedings.mlr.press/v80/balestriero18a.html">ref</a>]
+          which has then been extended for deep wavelet transforms [<a
+            href="https://www.nature.com/articles/s41467-020-17841-x">ref</a>].
+          The latter has found many applications e.g. in the NASA's Mars rover [<a
+            href="https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/111/6/2964/609480/Anatomy-of-Continuous-Mars-SEIS-and-Pressure-Data">ref</a>]
+          for marsquake detection.
+          In 2016 when joining Rice University for a PhD with Prof. Richard Baraniuk, I broadened my scope to explore
+          Deep
+          Networks from a theoretical persepective by employing affine spline operators [<a
+            href="https://proceedings.mlr.press/v80/balestriero18b.html">ref1</a>, <a
+            href="https://ieeexplore.ieee.org/document/9296823">ref2</a>].
+          This led me to revisit and improve state-of-the-art methods e.g. batch-normalization [<a
+            href="https://arxiv.org/abs/2209.14778">ref</a>] or
+          generative networks [<a href="https://openreview.net/forum?id=r5qumLiYwf9">ref1</a>, <a
+            href="https://ieeexplore.ieee.org/document/9879198">ref2</a>].
+          In 2022 when joining Meta AI Research (FAIR) for a postdoc with Prof. Yann LeCun, I further enlarged my
+          research interests e.g. to include
+          self-supervised learning or biases emerging from data-augmentation and regularization leading to many
+          publications.
+        </div>
+        <div class="col-7" id="mission"
+          style="text-align: center;font-weight: 800;margin-left: auto;margin-right: auto;">
+          I am now fighting to bridge the gaps and cracks between Deep Learning theory and best
+          practices by developping realistic mathematical models that can be used to help practicioners
+        </div>
+
+        <!-- <h3 class="text-center">Research Interests</h3>
         <div class="row align-items-center">
           <div class="col text-center">
             <h5 class="text-center"><u>Spline Theory to Interpret and Improve Deep Networks</u></h5>
@@ -124,7 +174,7 @@
           <div class="col">
             <h5 class="text-center"><u>MythBuster Series</u></h5>
           </div>
-        </div>
+        </div> -->
         <h3 class="text-center mt-3">Major Publications</h3>
         <div class="row align-items-center">
           <div class="col mb-auto mx-0 px-0">
@@ -143,11 +193,27 @@
               <li class="list-group-item">2019: <a href="https://openreview.net/pdf?id=BJej72AqF7" target="_blank">
                   Max-Affine Spline Perspective of Recurrent Neural Networks</a></li>
             </ul>
+            <img src="docs/assets/cvpr_logo.jpg" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
+            <ul class="
+            list-group">
+              <li class="list-group-item">2022: <a href="https://ieeexplore.ieee.org/document/9879198"
+                  target="_blank">Polarity Sampling: Quality and Diversity Control of Pre-Trained Generative Networks
+                  via Singular Values</a></li>
+            </ul>
           </div>
           <div class="col mb-auto mx-0 px-0">
             <img src="docs/assets/NeurIPS_logo.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
             <ul class="
             list-group">
+              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2204.03632" , target="_blank">The Effects
+                  of Regularization and Data Augmentation are Class Dependent</a></li>
+              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2205.11508" , target="_blank">Contrastive
+                  and Non-Contrastive Self-Supervised Learning Recover Global and Local Spectral Embedding Methods</a>
+              </li>
+              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2202.08325" , target="_blank">A
+                  Data-Augmentation Is Worth A Thousand Samples: Analytical Moments And Sampling-Free Training</a></li>
+              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2203.05483" , target="_blank">projUNN:
+                  efficient method for training deep networks with unitary matrices</a></li>
               <li class="list-group-item">2020: <a href="https://arxiv.org/abs/2006.10023" , target="_blank">Analytical
                   Probability Distributions and Expectation-Maximization Learning for Deep Gener-ative Networks</a></li>
               <li class="list-group-item">2019: <a
@@ -246,6 +312,604 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <!-- <script>
+
+    var width = 1024
+    var height = 700
+
+
+    function ForceGraph(
+      svg,
+      { nodes, // an iterable of node objects (typically [{id}, …])
+        links // an iterable of link objects (typically [{source, target}, …])
+      }, {
+        nodeFill = "currentColor", // node stroke fill (if not using a group color encoding)
+        nodeStroke = "#fff", // node stroke color
+        nodeStrokeWidth = 1.5, // node stroke width, in pixels
+        nodeStrokeOpacity = 1, // node stroke opacity
+        nodeRadius = 20, // node radius, in pixels
+        linkStroke = "#999", // link stroke color
+        linkStrokeOpacity = 0.6, // link stroke opacity
+        linkStrokeWidth = 1.5, // given d in links, returns a stroke width in pixels
+        linkStrokeLinecap = "round", // link stroke linecap
+        colors = d3.schemeTableau10, // an array of color strings, for the node groups
+        invalidation // when this promise resolves, stop the simulation
+      } = {}) {
+      // Compute values.
+      const N = d3.map(nodes, ({ id }) => id);
+      const LS = d3.map(links, ({ source }) => source);
+      const LT = d3.map(links, ({ target }) => target);
+      const T = d3.map(nodes, (_, i) => N[i]);
+      const G = d3.map(nodes, ({ group }) => group);
+      // Compute default domains.
+      const nodeGroups = d3.sort(G);
+
+      // Construct the scales.
+      const color = d3.scaleOrdinal(nodeGroups, colors);
+
+      links = links.map(d => Object.create(d))
+      const link = svg.selectAll("line")
+        .data(links)
+        .enter()
+        .append("line")
+        .style("stroke", "#ccc")
+        .style("stroke-width", 3);
+
+
+      // Construct the forces.
+      var counter = 0
+      const simulation = d3.forceSimulation(nodes)
+        .alphaTarget(0.3) // stay hot
+        .velocityDecay(0.1) // low friction
+        .force("x", d3.forceX().strength(0.01))
+        .force("y", d3.forceY().strength(0.01))
+        .force("charge", d3.forceManyBody().strength((d, i) => i ? 0 : -width * 2 / 3))
+        .force("collide", d3.forceCollide().radius(d => 2 * d.rx + 1).iterations(3))
+        .on("tick", ticked);
+
+      var node = svg.selectAll("g")
+        .data(nodes)
+        .enter()
+        .append("g");
+
+
+      node.append("ellipse")
+        .attr("stroke", nodeStroke)
+        .attr("stroke-opacity", nodeStrokeOpacity)
+        .attr("stroke-width", nodeStrokeWidth)
+        .attr("rx", 3 * nodeRadius)
+        .attr("ry", nodeRadius);
+      node.append("text")
+        .style("dominant-baseline", "central")
+        .attr("dx", 0)
+        .attr('text-anchor', "middle")
+        .attr("font-size", "14px")
+        .attr("fill", "white")
+        .text(function (s) { console.log(s); console.log(123); return s.id })
+
+      // if (L) link.attr("stroke", ({ index: i }) => L[i]);
+      // if (G) node.attr("fill", ({ index: i }) => color(G[i]));
+      // if (invalidation != null) invalidation.then(() => simulation.stop());
+
+
+      function ticked() {
+
+        counter += 1
+
+        if (counter == 350) {
+          this.velocityDecay(0.93)
+          this.restart()
+          this.alpha(0.5)
+          this.force("link", d3.forceLink(links).id(d => d.id).strength(1.))
+        }
+        else if (counter == 500) {
+          this.velocityDecay(0.93)
+          this.restart()
+          this.alpha(1)
+          this.alphaTarget(0.) // stay hot
+          this.force("link", d3.forceManyBody().strength(-920))//.strength(d => 0.1 * links[d.index].strength * (counter - S) / 400))
+        }
+        else if (counter > 1000)
+          return null
+
+        link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+        node.attr("transform", function (d) {
+          return "translate(" + d.x + "," + d.y + ")";
+        });
+      }
+
+      // function drag(simulation) {
+      //   function dragstarted(event) {
+      //     if (!event.active) simulation.alphaTarget(0.3).restart();
+      //     event.subject.fx = event.subject.x;
+      //     event.subject.fy = event.subject.y;
+      //   }
+
+      //   function dragged(event) {
+      //     event.subject.fx = event.x;
+      //     event.subject.fy = event.y;
+      //   }
+
+      //   function dragended(event) {
+      //     if (!event.active) simulation.alphaTarget(0);
+      //     event.subject.fx = null;
+      //     event.subject.fy = null;
+      //   }
+
+      //   return d3.drag()
+      //     .on("start", dragstarted)
+      //     .on("drag", dragged)
+      //     .on("end", dragended);
+      // }
+
+      // return Object.assign(svg.node(), { scales: { color } });
+    }
+
+    const svg = d3.select("#main").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [-width / 2, -height / 2, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+    const mygraph = {
+      nodes: [{
+        id: "VICReg",
+        group: 1,
+      }, {
+        id: "BarlowTwins",
+        group: 1,
+      }, {
+        id: "WMSE",
+        group: 1
+      }, {
+        id: "SimCLR",
+        group: 1
+      }, {
+        id: "TupletLoss",
+        group: 1
+      }, {
+        id: "TripletLoss",
+        group: 1
+      }, {
+        id: "ContSpecLoss",
+        group: 1
+      }, {
+        id: "DeepCCA",
+        group: 1
+      }, {
+        id: "KernelCCA",
+        group: 1
+      }, {
+        id: "LinearCCA",
+        group: 1
+      }, {
+        id: "MDS",
+        group: 1
+      }, {
+        id: "KernelMDS",
+        group: 1
+      }
+      ],
+      links: [{ source: "VICReg", target: "WMSE", strength: 0.3 },
+      { source: "BarlowTwins", target: "WMSE", strength: 0.7 },
+      { source: "BarlowTwins", target: "DeepCCA", strength: 0.5 },
+      { source: "DeepCCA", target: "KernelCCA", strength: 0.5 },
+      { source: "DeepCCA", target: "LinearCCA", strength: 0.5 },
+      { source: "ContSpecLoss", target: "SimCLR", strength: 0.5 },
+      { source: "TupletLoss", target: "SimCLR", strength: 0.5 },
+      { source: "TripletLoss", target: "TupletLoss", strength: 0.5 },
+      { source: "KernelMDS", target: "MDS", strength: 0.5 },
+      { source: "KernelMDS", target: "ContSpecLoss", strength: 0.5 },
+      ]
+    }
+    // ForceGraph(svg, mygraph)
+  </script>
+  <script>
+    // Create a 3d scatter plot within d3 selection parent.
+    function scatterPlot3d(parent) {
+      var x3d = parent
+        .append("x3d")
+        .style("width", parseInt(parent.style("width")) + "px")
+        .style("height", parseInt(parent.style("height")) + "px")
+        .style("border", "none")
+
+      var scene = x3d.append("scene")
+
+      scene.append("orthoviewpoint")
+        .attr("centerOfRotation", [5, 5, 5])
+        .attr("fieldOfView", [-5, -5, 15, 15])
+        .attr("orientation", [-0.5, 1, 0.2, 1.12 * Math.PI / 4])
+        .attr("position", [8, 4, 15])
+
+      var rows = initializeDataGrid();
+      var axisRange = [0, 10];
+      var scales = [];
+      var initialDuration = 0;
+      var defaultDuration = 800;
+      var ease = 'linear';
+      var time = 0;
+      var axisKeys = ["x", "y", "z"]
+
+      // Helper functions for initializeAxis() and drawAxis()
+      function axisName(name, axisIndex) {
+        return ['x', 'y', 'z'][axisIndex] + name;
+      }
+
+      function constVecWithAxisValue(otherValue, axisValue, axisIndex) {
+        var result = [otherValue, otherValue, otherValue];
+        result[axisIndex] = axisValue;
+        return result;
+      }
+
+      // Used to make 2d elements visible
+      function makeSolid(selection, color) {
+        selection.append("appearance")
+          .append("material")
+          .attr("diffuseColor", color || "black")
+        return selection;
+      }
+
+      // Initialize the axes lines and labels.
+      function initializePlot() {
+        initializeAxis(0);
+        initializeAxis(1);
+        initializeAxis(2);
+      }
+
+      function initializeAxis(axisIndex) {
+        var key = axisKeys[axisIndex];
+        drawAxis(axisIndex, key, initialDuration);
+
+        var scaleMin = axisRange[0];
+        var scaleMax = axisRange[1];
+
+        // the axis line
+        var newAxisLine = scene.append("transform")
+          .attr("class", axisName("Axis", axisIndex))
+          .attr("rotation", ([[0, 0, 0, 0], [0, 0, 1, Math.PI / 2], [0, 1, 0, -Math.PI / 2]][axisIndex]))
+          .append("shape")
+        newAxisLine
+          .append("appearance")
+          .append("material")
+          .attr("emissiveColor", "lightgray")
+        newAxisLine
+          .append("polyline2d")
+          // Line drawn along y axis does not render in Firefox, so draw one
+          // along the x axis instead and rotate it (above).
+          .attr("lineSegments", "0 0," + scaleMax + " 0")
+
+        // axis labels
+        var newAxisLabel = scene.append("transform")
+          .attr("class", axisName("AxisLabel", axisIndex))
+          .attr("translation", constVecWithAxisValue(0, scaleMin + 1.1 * (scaleMax - scaleMin), axisIndex))
+
+        var newAxisLabelShape = newAxisLabel
+          .append("billboard")
+          .attr("axisOfRotation", "0 0 0") // face viewer
+          .append("shape")
+          .call(makeSolid)
+
+        var labelFontSize = 0.6;
+
+        newAxisLabelShape
+          .append("text")
+          .attr("class", axisName("AxisLabelText", axisIndex))
+          .attr("solid", "true")
+          .attr("string", key)
+          .append("fontstyle")
+          .attr("size", labelFontSize)
+          .attr("family", "SANS")
+          .attr("justify", "END MIDDLE")
+      }
+
+      // Assign key to axis, creating or updating its ticks, grid lines, and labels.
+      function drawAxis(axisIndex, key, duration) {
+
+        var scale = d3.scale.linear()
+          .domain([-5, 5]) // demo data range
+          .range(axisRange)
+
+        scales[axisIndex] = scale;
+
+        var numTicks = 8;
+        var tickSize = 0.1;
+        var tickFontSize = 0.5;
+
+        // ticks along each axis
+        var ticks = scene.selectAll("." + axisName("Tick", axisIndex))
+          .data(scale.ticks(numTicks));
+        var newTicks = ticks.enter()
+          .append("transform")
+          .attr("class", axisName("Tick", axisIndex));
+        newTicks.append("shape").call(makeSolid)
+          .append("box")
+          .attr("size", tickSize + " " + tickSize + " " + tickSize);
+        // enter + update
+        ticks.transition().duration(duration)
+          .attr("translation", function (tick) {
+            return constVecWithAxisValue(0, scale(tick), axisIndex);
+          })
+        ticks.exit().remove();
+
+        // tick labels
+        var tickLabels = ticks.selectAll("billboard shape text")
+          .data(function (d) { return [d]; });
+        var newTickLabels = tickLabels.enter()
+          .append("billboard")
+          .attr("axisOfRotation", "0 0 0")
+          .append("shape")
+          .call(makeSolid)
+        newTickLabels.append("text")
+          .attr("string", scale.tickFormat(10))
+          .attr("solid", "true")
+          .append("fontstyle")
+          .attr("size", tickFontSize)
+          .attr("family", "SANS")
+          .attr("justify", "END MIDDLE");
+        tickLabels // enter + update
+          .attr("string", scale.tickFormat(10))
+        tickLabels.exit().remove();
+
+        // base grid lines
+        if (axisIndex == 0 || axisIndex == 2) {
+
+          var gridLines = scene.selectAll("." + axisName("GridLine", axisIndex))
+            .data(scale.ticks(numTicks));
+          gridLines.exit().remove();
+
+          var newGridLines = gridLines.enter()
+            .append("transform")
+            .attr("class", axisName("GridLine", axisIndex))
+            .attr("rotation", axisIndex == 0 ? [0, 1, 0, -Math.PI / 2] : [0, 0, 0, 0])
+            .append("shape")
+
+          newGridLines.append("appearance")
+            .append("material")
+            .attr("emissiveColor", "gray")
+          newGridLines.append("polyline2d");
+
+          gridLines.selectAll("shape polyline2d").transition().duration(duration)
+            .attr("lineSegments", "0 0, " + axisRange[1] + " 0")
+
+          gridLines.transition().duration(duration)
+            .attr("translation", axisIndex == 0
+              ? function (d) { return scale(d) + " 0 0"; }
+              : function (d) { return "0 0 " + scale(d); }
+            )
+        }
+      }
+
+      // Update the data points (spheres) and stems.
+      function plotData(duration) {
+
+        if (!rows) {
+          console.log("no rows to plot.")
+          return;
+        }
+
+        var x = scales[0], y = scales[1], z = scales[2];
+        var sphereRadius = 0.2;
+
+        // Draw a sphere at each x,y,z coordinate.
+        var datapoints = scene.selectAll(".datapoint").data(rows);
+        datapoints.exit().remove()
+
+        var newDatapoints = datapoints.enter()
+          .append("transform")
+          .attr("class", "datapoint")
+          .attr("scale", [sphereRadius, sphereRadius, sphereRadius])
+          .append("shape");
+        newDatapoints
+          .append("appearance")
+          .append("material");
+        newDatapoints
+          .append("sphere")
+        // Does not work on Chrome; use transform instead
+        //.attr("radius", sphereRadius)
+
+        datapoints.selectAll("shape appearance material")
+          .attr("diffuseColor", 'steelblue')
+
+        datapoints.transition().ease(ease).duration(duration)
+          .attr("translation", function (row) {
+            return x(row[axisKeys[0]]) + " " + y(row[axisKeys[1]]) + " " + z(row[axisKeys[2]])
+          })
+
+        // Draw a stem from the x-z plane to each sphere at elevation y.
+        // This convention was chosen to be consistent with x3d primitive ElevationGrid. 
+        var stems = scene.selectAll(".stem").data(rows);
+        stems.exit().remove();
+
+        var newStems = stems.enter()
+          .append("transform")
+          .attr("class", "stem")
+          .append("shape");
+        newStems
+          .append("appearance")
+          .append("material")
+          .attr("emissiveColor", "gray")
+        newStems
+          .append("polyline2d")
+          .attr("lineSegments", function (row) { return "0 1, 0 0"; })
+
+        stems.transition().ease(ease).duration(duration)
+          .attr("translation",
+            function (row) { return x(row[axisKeys[0]]) + " 0 " + z(row[axisKeys[2]]); })
+          .attr("scale",
+            function (row) { return [1, y(row[axisKeys[1]])]; })
+      }
+
+      function initializeDataGrid() {
+        var rows = [];
+        // Follow the convention where y(x,z) is elevation.
+        for (var x = -5; x <= 5; x += 1) {
+          for (var z = -5; z <= 5; z += 1) {
+            rows.push({ x: x, y: 0, z: z });
+          }
+        }
+        return rows;
+      }
+
+      function updateData() {
+        time += Math.PI / 8;
+        if (x3d.node() && x3d.node().runtime) {
+          for (var r = 0; r < rows.length; ++r) {
+            var x = rows[r].x;
+            var z = rows[r].z;
+            rows[r].y = 5 * (Math.sin(0.5 * x + time) * Math.cos(0.25 * z + time));
+          }
+          plotData(defaultDuration);
+        } else {
+          console.log('x3d not ready.');
+        }
+      }
+
+      initializeDataGrid();
+      initializePlot();
+      setInterval(updateData, defaultDuration);
+    }
+    d3.select('html').style('height', '100%').style('width', '100%')
+    d3.select('body').style('height', '100%').style('width', '100%')
+    d3.select('#main').style('width', "500px").style('height', "500px")
+    scatterPlot3d(d3.select('#main').style('width', "500px").style('height', "500px"));
+
+    var chartHolder = d3.select('#main');
+
+    // Generate some data
+    var myData = d3.x3d.randomData.dataset5();
+
+    // Declare the chart component
+    var myChart = d3.x3d.chart.surfacePlot();
+
+    // Attach chart and data to the chartholder
+    chartHolder.datum(myData).call(myChart);
+
+
+
+
+    function makeSolid(selection, color) {
+      selection.append("appearance").append("material").attr("diffuseColor", color || "black");
+      return selection;
+    }
+
+    function drawAxes(scene, x, y, z) {
+      var xAxis = d3_x3dom_axis.x3domAxis('x', 'y', x).tickSize(z.range()[1] - z.range()[0]).tickPadding(y.range()[0]);;
+      var yAxis = d3_x3dom_axis.x3domAxis('y', 'x', y).tickSize(z.range()[1] - z.range()[0]);
+      var zAxis2 = d3_x3dom_axis.x3domAxis('z', 'y', z).tickSize(x.range()[1] - x.range()[0]).tickFormat(function (d) { return '' });
+      var zAxis = d3_x3dom_axis.x3domAxis('z', 'x', z).tickSize(x.range()[1] - x.range()[0]);
+      scene.append('group')
+        .attr('class', 'xAxis')
+        .call(xAxis)
+        .select('.domain').call(makeSolid, 'red');
+      scene.append('group')
+        .attr('class', 'yAxis')
+        .call(yAxis)
+        .select('.domain').call(makeSolid, 'blue');
+
+      scene.append('group')
+        .attr('class', 'zAxis')
+        .call(zAxis)
+        .select('.domain').call(makeSolid, 'green');
+      scene.append('group')
+        .attr('class', 'zAxis')
+        .call(zAxis2)
+        .select('.domain').call(makeSolid, 'green');
+    }
+
+    function initX3DomScene(selector, width, height) {
+      var x3d = d3.select("body").append("x3d")
+        .attr("width", width + 'px')
+        .attr("height", height + 'px');
+      d3.select('.x3dom-canvas')
+        .attr("width", 2 * width)
+        .attr("height", 2 * height);
+      var scene = x3d.append("scene");
+      var view_pos = [30, 100, 30];
+      var fov = 0.8;
+      var view_or = [0.02, 1, 1, 2.8];
+      scene.append("viewpoint")
+        .attr("position", view_pos.join(" "))
+        .attr("orientation", view_or.join(" "))
+        .attr("fieldOfView", fov);
+      return scene
+    }
+
+    var width = 800, height = 400;
+
+    var scene = initX3DomScene('#main', width, height);
+
+    var x = d3.scaleLinear().range([0, 40]);
+    var y = d3.scaleLinear().range([0, 40]);
+    var z = d3.scaleLinear().range([0, 40]);
+
+    drawAxes(scene, x, y, z);
+
+    var cx = 0.5;
+    var cy = 0.9;
+    var f = function (vx, vy) { return (vx - cx) * (vx - cx) + (vy - cy) * (vy - cy); };
+
+    var X = d3.range(0, 1.05, 0.1);
+    var Y = d3.range(0, 1.05, 0.1);
+    var nx = X.length,
+      ny = Y.length;
+
+    var data = d3.range(nx).map(function (i) {
+      return d3.range(ny).map(
+        function (j) {
+          return [x(X[i]), y(Y[j]), z(f(X[i], Y[j]))];
+        });
+    })
+
+    var flattened = d3.merge(data);
+    var coordinates = d3.merge(flattened).join(' ');
+
+    var coordIndex = d3.merge(d3.range(ny - 1).map(function (j) {
+      return d3.merge(d3.range(nx - 1).map(function (i) {
+        var start = i + j * nx;
+        return [start, start + nx, start + nx + 1, start + 1, -1];
+      }));
+    }));
+
+    var coordIndexBack = d3.merge(d3.range(ny - 1).map(function (j) {
+      return d3.merge(d3.range(nx - 1).map(function (i) {
+        var start = i + j * nx;
+        return [start, start + 1, start + nx + 1, start + nx, -1];
+      }));
+    }));
+
+    var color = d3.scaleLinear().domain(d3.extent(flattened, function (d) { return d[2]; }))
+      .range(['blue', 'red'])
+      .interpolate(d3.interpolateLab);
+
+
+    var colors = flattened.map(function (d) {
+      var col = d3.color(color(d[2]));
+      return '' + Math.round(col.r / 2.55) / 100 + ' ' + Math.round(col.g / 2.55) / 100 + ' ' + Math.round(col.b / 2.55) / 100;
+    });
+
+    var surfacesData = [{
+      points: coordinates,
+      faces: coordIndex.concat(coordIndexBack).join(' '),
+      colors: colors.join(' '),
+    }]
+
+    var surfaces = scene.selectAll('.surface')
+      .data(surfacesData);
+    surfaces
+      .enter()
+      .append('shape')
+      .append('indexedfaceset')
+      .attr('coordIndex', function (d) { return d.faces })
+      .append("coordinate")
+      .attr('point', function (d) { return d.points; });
+
+    d3.selectAll('indexedFaceSet')
+      .append('color')
+      .attr('color', function (d) { return d.colors; });
+  </script> -->
 </body>
 
 </html>
