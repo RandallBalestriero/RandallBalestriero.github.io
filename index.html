@@ -35,21 +35,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
-    <h2 class="text-white h1">Randall Balestriero</h2>
 
-    <ul class="nav justify-content-center w-100 list-group-horizontal">
-      <li class="nav-item text-white w-50 h4 font-weight-bold font-italic" style="text-align: center;">
-        Fighting to bridge the gaps and cracks between Deep Learning theory and best
-        practices by developping realistic mathematical models to guide practicioners
-      </li>
-      <li class="h-50 mt-4">
-        <a class="btn btn-light" href="./docs/assets/resume.pdf">CV/Resume</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white sticky-top pb-0">
+    <div class="container-fluid">
+      <a class="navbar-brand absolute-position" href="#" style="width: 15%;">
+        <img src="docs/assets/prof_pic.jpeg" alt="" class="rounded-circle" alt="" width="100%">
+      </a>
+      <div class="row">
+        <div class=" text-white h2 font-weight-bold text-center">
+          Practical Deep Learning Theory
+        </div>
+        <div class="w-100"></div>
+        <div class="col text-white h5 font-weight-bold  text-center">
+          Improves SOTA <i class="bi bi-check"></i>
+        </div>
+        <div class="col text-white h5 font-weight-bold  text-center">
+          Guides Practicioners <i class="bi bi-check"></i>
+        </div>
+        <div class="col text-white h5 font-weight-bold  text-center">
+          Answers regulators <i class="bi bi-check"></i>
+        </div>
+        <div class="col text-white h5 font-weight-bold  text-center">
+          Ensures Fairness <i class="bi bi-check"></i>
+        </div>
+        <div class="w-100  text-center mb-0 pb-0">
+          Self Supervised Learning | Learnable Signal Processing | Spline Theory | Generative AI | Large Language Models
+        </div>
+        <div class="w-100  text-center my-0 py-0">
+          Computer Vision | NLP | Bioacoustic | Geophysics | Medical Data | Quantitative Finance
+        </div>
+      </div>
+    </div>
   </nav>
   <style>
     .fa {
@@ -95,63 +114,152 @@
 </head>
 
 <body>
-  <div class="container-fluid ml-0 pl-0">
-    <div class="row ml-0 pl-0">
-      <div class="col text-white bg-secondary mw-20">
-        <div class="card w-100 text-center text-white bg-secondary border-0">
-          <img src="./docs/assets/prof_pic.jpeg" class="card-img-top rounded-circle" alt="profile picture"
-            style="width:50%; margin-left:auto; margin-right:auto">
-          <div class="card-body">
-            <h4 class="card-title">Postdoctorate Researcher</h4>
-            <h5 class="card-title">Meta AI Research (FAIR)</h5>
-            <div class="btn-toolbar w-100 mw-100" role="toolbar" aria-label="Toolbar with button groups">
-              <div class="btn-group flex-fill" role="group" aria-label="First group">
-                <a href="https://twitter.com/randall_balestr" class="fa fa-twitter ml-auto mr-auto" target="_blank"></a>
-              </div>
-              <div class="btn-group flex-fill" role="group" aria-label="Third group">
-                <a href="https://www.linkedin.com/in/randallbalestriero/" class="fa fa-linkedin ml-auto mr-auto"
-                  target="_blank"></a>
-              </div>
-              <div class="btn-group flex-fill" role="group" aria-label="Fourth group">
-                <a href="https://github.com/RandallBalestriero" class="fa fa-github ml-auto mr-auto"
-                  target="_blank"></a>
-              </div>
-              <div class="btn-group flex-fill" role="group" aria-label="Fourth group">
-                <a href="https://scholar.google.com/citations?user=S1x_xqcAAAAJ&hl=en"
-                  class="fa fa-graduation-cap ml-auto mr-auto" target="_blank"></a>
-              </div>
-            </div>
+  <div class="container-fluid px-0">
+    <div class="row vh-100 collapse show no-gutters d-flex h-100 position-relative align-items-start">
+      <div class="col-3 p-0 min-vh-100 text-white position-fixed h-100 bg-light ">
+        <div class="w-100 text-center text-dark border-0">
+
+          <!-- <div class="card-body"> -->
+          <div class="text-dark h3">Randall Balestriero</div>
+          <a class="btn btn-primary btn-lg btn-success m-0 p-0 w-50 ml-auto mr-auto"
+            href="./docs/assets/resume.pdf">Download Resume</a>
+          <div id="menu" class="list-group list-group-flush mt-3">
+            <a class="list-group-item bg-light " href="#list-item-1">Research</a>
+            <a class="list-group-item bg-light " href="#list-item-2">Bio</a>
+            <a class="list-group-item bg-light " href="#list-item-3">Media</a>
+            <a class="list-group-item bg-light " href="#list-item-4">Publications</a>
           </div>
         </div>
-
-        <!-- <a class="twitter-timeline mw-25 w-25" data-height="800" data-theme="dark"
+        <a class="twitter-timeline mw-25 w-25" data-height="500" data-theme="light"
           href="https://twitter.com/randall_balestr?ref_src=twsrc%5Etfw">My recent Tweets...</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-      <div class="col-9" id="main">
-        <div id="intro" style="text-align: justify;width: 100%;padding: 2%;">
-          I have been doing research in learnable signal processing since 2013, in particular with learnable
-          parametrized
-          wavelets [<a href="https://proceedings.mlr.press/v80/balestriero18a.html">ref</a>]
-          which has then been extended for deep wavelet transforms [<a
-            href="https://www.nature.com/articles/s41467-020-17841-x">ref</a>].
-          The latter has found many applications e.g. in the NASA's Mars rover [<a
-            href="https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/111/6/2964/609480/Anatomy-of-Continuous-Mars-SEIS-and-Pressure-Data">ref</a>]
-          for marsquake detection.
-          In 2016 when joining Rice University for a PhD with Prof. Richard Baraniuk, I broadened my scope to explore
+      <div class="col-9 p-3 overflow-auto h-100 ms-auto" id="main">
+        <!-- <div data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="0" class="scrollspy-example me-3" tabindex="0"> -->
+        <div id="list-item-1" class="h1 text-center mb-3 pb-3"><u>Research</u></div>
+        <p style="text-align: justify;">We are now in a process of <em>getting one (AI) on every desk and
+            in every
+            home</em>
+          which puts
+          intense
+          pressure on practitioners to consistently deliver empirical breakthroughs and on regulators to safeguard
+          users.
+          My research develops <b>novel theoretical solutions</b> to <b>guide practicioners</b>, to <b>safeguard
+            users</b>, and to pave the
+          way towards a <b>truely autonomous AI</b> solution.
+          I believe that self-contained,
+          provably safe, and energy efficient designs will be the leap from current human-guided AI to AGI.
+        </p>
+        <p style="text-align: justify;">AI pipelines involve many moving pieces from the <b>data</b>
+          (collection,
+          cleaning,
+          augmentation,
+          batching),
+          the <b>architecture</b> (deep network, parametrization, distillation, pruning, quantization), to the
+          <b>loss</b> (supervised, autoencoding, self-supervised). Practical theoretical results need to encompass
+          those
+          interactions which is why I pursue multiple research threads along each of those directions.
+        </p>
+
+
+        <div id="list-item-2" class="h1 text-center my-3 py-3"><u>Bio</u></div>
+        <p style="text-align: justify;">
+          I have been doing research in learnable signal processing since 2013, in particular with <a
+            href="https://proceedings.mlr.press/v80/balestriero18a.html">learnable
+            parametrized
+            wavelets</a>
+          which have then been extended for <a href="https://www.nature.com/articles/s41467-020-17841-x">deep wavelet
+            transforms</a>.
+          The latter has found many applications, e.g., in the <a
+            href="https://pubs.geoscienceworld.org/ssa/bssa/article-abstract/111/6/2964/609480/Anatomy-of-Continuous-Mars-SEIS-and-Pressure-Data">NASA's
+            Mars rover </a> for marsquake detection.
+          In 2016 when joining Rice University for a PhD with Prof. Richard Baraniuk, I broadened my scope to
+          explore
           Deep
-          Networks from a theoretical persepective by employing affine spline operators [<a
-            href="https://proceedings.mlr.press/v80/balestriero18b.html">ref1</a>, <a
-            href="https://ieeexplore.ieee.org/document/9296823">ref2</a>].
-          This led me to revisit and improve state-of-the-art methods e.g. batch-normalization [<a
-            href="https://arxiv.org/abs/2209.14778">ref</a>] or
-          generative networks [<a href="https://openreview.net/forum?id=r5qumLiYwf9">ref1</a>, <a
-            href="https://ieeexplore.ieee.org/document/9879198">ref2</a>].
-          In 2022 when joining Meta AI Research (FAIR) for a postdoc with Prof. Yann LeCun, I further enlarged my
+          Networks from a theoretical persepective by employing <a
+            href="https://proceedings.mlr.press/v80/balestriero18b.html">affine spline operators</a>.
+          This led me to revisit and improve state-of-the-art methods, e.g., <a
+            href="https://arxiv.org/abs/2209.14778">batch-normalization</a> or <a
+            href="https://ieeexplore.ieee.org/document/9879198">generative networks</a>.
+          In 2021 when joining Meta AI Research (FAIR) for a postdoc with Prof. Yann LeCun, I further enlarged
+          my
           research interests e.g. to include
-          self-supervised learning or biases emerging from data-augmentation and regularization leading to many
-          publications.
+          <a href="https://arxiv.org/abs/2304.12210">self-supervised learning</a> or biases emerging from
+          data-augmentation and regularization leading to many
+          publications and <a href="https://icml.cc/virtual/2023/tutorial/21552conference"> conference tutorials</a>.
+          In 2023, I have joined GQS, Citadel, to work on highly noisy and nonstationnary financial time-series and to
+          provide AI
+          solutions for prediction
+          and representation learning. Such industry exposure is driving my research agenda to provide practical
+          solutions from first principles which I have been pursuing every day for the last 10 years.
+        </p>
+
+
+
+        <div id="list-item-3" class="h1 text-center my-3 py-3"><u>Media</u></div>
+        <div class="list-group ">
+          <a class="list-group-item border-0"
+            href="https://ai.meta.com/blog/self-supervised-learning-practical-guide/">Meta AI
+            releases the Self Supervised Learning Cookbook <img class="img-fluid ml-auto mr-0"
+              src="docs/assets/META.png" width="10%" height="10%" alt="META logo"></a>
+          <a class="list-group-item border-0"
+            href="https://news.rice.edu/news/2020/small-quake-clusters-cant-hide-ai">AI
+            discovers new events in geophysical data for eathquacke detection<img class="img-fluid ml-auto mr-0"
+              src="docs/assets/RICE.png" width="10%" height="10%" alt="RICE logo"></a>
+          <a class="list-group-item border-0"
+            href="https://nyudatascience.medium.com/the-nyu-center-for-data-science-at-neurips-2023-2615ee2f080e">NYU
+            CDS at NeurIPS 2023<img class="img-fluid ml-auto mr-0" src="docs/assets/NYU.png" width="4%" height="3%"
+              alt="NYU logo"></a>
+          <a class="list-group-item border-0" href="https://www.youtube.com/watch?v=9dLd6n9yT8U">
+            Self Supervised Learning (discussion with MLST and Prof. Yann LeCun) <img class="img-fluid ml-auto mr-0"
+              src="docs/assets/YOUTUBE.png" width="6%" height="3%" alt="YOUTUBE logo"></a>
+          <a class="list-group-item border-0" href="https://www.youtube.com/watch?v=86ib0sfdFtw">
+            Interpolation and extrapolation (discussion with MLST and Prof. Yann LeCun) <img
+              class="img-fluid ml-auto mr-0" src="docs/assets/YOUTUBE.png" width="6%" height="5%"
+              alt="YOUTUBE logo"></a>
+          <a class="list-group-item border-0"
+            href="https://signalprocessingsociety.org/newsletter/2020/07/how-can-we-use-tools-signal-processing-understand-better-neural-networks">
+            How can we use tools from signal processing to understand better neural networks? <img
+              class="img-fluid ml-auto mr-0" src="docs/assets/IEEElogo.png" width="6%" height="5%" alt="IEEE logo"></a>
         </div>
+
+
+        <div id="list-item-4" class="h1 text-center my-3 py-3"><u>Publications</u></div>
+        <div class="row justify-content-evenly">
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/ICLR-logo.png" width="100%" height="100%" alt="ICLR logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/NeurIPS_logo.png" width="100%" height="100%" alt="NeurIPS logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/ICML.png" width="100%" height="100%" alt="ICML logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/cvpr_logo.jpg" width="100%" height="100%" alt="CVPR logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/eccv.svg" width="100%" height="100%" alt="ECCV logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/msmllogo_flat.png" width="100%" height="100%" alt="MSML logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/Nature_Communications_Logo.png" width="100%" height="100%" alt="Nature logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/IEEElogo.png" width="100%" height="100%" alt="IEEE logo">
+          </div>
+          <div class="col-1 mb-auto mx-2 px-0 align-self-center">
+            <img src="docs/assets/springer.png" width="100%" height="100%" alt="Springer logo">
+          </div>
+        </div>
+        <iframe
+          src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2FiAbKrF3bfrjLkXvR9&noBootstrap=1"
+          width="100%" height="6000px" scrolling="no" style="border:none"></iframe>
+        <!-- <script
+            src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2F8zvz6cEDcybKZktyB&noBootstrap=1&jsonp=1,owner=balestriero,hidemenu=true,theme=mila"></script> -->
+        <!-- </div> -->
 
         <!-- <h3 class="text-center">Research Interests</h3>
         <div class="row align-items-center">
@@ -168,142 +276,44 @@
             <h5 class="text-center"><u>MythBuster Series</u></h5>
           </div>
         </div> -->
-        <h3 class="text-center mt-3">Major Publications</h3>
-        <div class="row align-items-center">
-          <div class="col mb-auto mx-0 px-0">
-            <img src="docs/assets/ICLR-logo.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="
-            list-group">
-              <li class="list-group-item">2022: <a href="https://arxiv.org/pdf/2110.08009.pdf" target="_blank">MaGNET:
-                  Uniform Sampling
-                  from Deep Generative Network Manifolds Without Retraining</a></li>
-              <li class="list-group-item">2021: <a href="https://arxiv.org/pdf/2006.10246.pdf" target="_blank">The
-                  Recurrent Neural Tangent Kernel</a></li>
-              <li class="list-group-item">2019: <a href="https://openreview.net/pdf?id=BJej72AqF7" target="_blank">From
-                  Hard
-                  to Soft: Understanding Deep Network Nonlinearities via Vector Quantization andStatistical
-                  Inference</a></li>
-              <li class="list-group-item">2019: <a href="https://openreview.net/pdf?id=BJej72AqF7" target="_blank">
-                  Max-Affine Spline Perspective of Recurrent Neural Networks</a></li>
-            </ul>
-            <img src="docs/assets/cvpr_logo.jpg" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="
-            list-group">
-              <li class="list-group-item">2022: <a href="https://ieeexplore.ieee.org/document/9879198"
-                  target="_blank">Polarity Sampling: Quality and Diversity Control of Pre-Trained Generative Networks
-                  via Singular Values</a></li>
-            </ul>
-          </div>
-          <div class="col mb-auto mx-0 px-0">
-            <img src="docs/assets/NeurIPS_logo.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="
-            list-group">
-              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2204.03632" , target="_blank">The Effects
-                  of Regularization and Data Augmentation are Class Dependent</a></li>
-              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2205.11508" , target="_blank">Contrastive
-                  and Non-Contrastive Self-Supervised Learning Recover Global and Local Spectral Embedding Methods</a>
-              </li>
-              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2202.08325" , target="_blank">A
-                  Data-Augmentation Is Worth A Thousand Samples: Analytical Moments And Sampling-Free Training</a></li>
-              <li class="list-group-item">2022: <a href="https://arxiv.org/abs/2203.05483" , target="_blank">projUNN:
-                  efficient method for training deep networks with unitary matrices</a></li>
-              <li class="list-group-item">2020: <a href="https://arxiv.org/abs/2006.10023" , target="_blank">Analytical
-                  Probability Distributions and Expectation-Maximization Learning for Deep Gener-ative Networks</a></li>
-              <li class="list-group-item">2019: <a
-                  href="https://papers.nips.cc/paper/9712-the-geometry-of-deep-networks-power-diagram-subdivision.pdf"
-                  target="_blank">The Geometry of Deep Networks: Power Diagram Subdivision</a></li>
-            </ul>
-          </div>
-          <div class="col mb-auto mx-0 px-0">
-            <img src="docs/assets/ICML.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="
-            list-group">
-              <li class="list-group-item">2018: <a
-                  href="http://proceedings.mlr.press/v80/balestriero18b/balestriero18b.pdf" target="_blank">A Spline
-                  Theory of Deep Networks</a></li>
-              <li class="list-group-item">2018: <a
-                  href="http://proceedings.mlr.press/v80/balestriero18a/balestriero18a.pdf" target="_blank">Spline
-                  Filters For End-to-End Deep Learning</a></li>
-            </ul>
-            <img src="docs/assets/msmllogo_flat.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="
-            list-group">
-              <li class="list-group-item">2021: <a href="https://arxiv.org/pdf/2006.07713.pdf" ,
-                  target="_blank">Interpretable and Learnable Super-Resolution Time-Frequency Representation</a></li>
-              <li class="list-group-item">2021: <a href="https://arxiv.org/pdf/2009.09525.pdf" target="_blank">Deep
-                  Autoencoders: From Understanding to Generalization Guarantees</a></li>
-            </ul>
-            <img src="docs/assets/Nature_Communications_Logo.png" class="card-img-top mb-1 px-5 py-3"
-              alt="faces generation">
-            <ul class="list-group">
-              <li class="list-group-item"><a href="https://www.nature.com/articles/s41467-020-17841-x"
-                  target="_blank">Clustering Earthquake Signals and Background Noises
-                  in Continuous Seismic Data with Un-supervised Deep Learning</a></li>
-            </ul>
-          </div>
-          <div class="col mb-auto mx-0 px-0">
-            <img src="docs/assets/IEEElogo.png" class="card-img-top mb-1 px-5 py-3" alt="faces generation">
-            <ul class="list-group">
-              <li class="list-group-item">ICASSP 2022: <a href="#" , target="_blank">DeepHull: Fast Convex Hull
-                  Approximation in High Dimensions</a></li>
-              <li class="list-group-item">ICASSP 2022: <a href="#" , target="_blank">No More Than 6ft. Apart: Robust
-                  K-Means Via Radius Upper Bound</a></li>
-              <li class="list-group-item">ICASSP 2021:
-                <a href="https://arxiv.org/abs/2010.13975.pdf" , target="_blank">Wearing a MASK: Compressed
-                  Representations of Variable-Length Sequences Using RecurrentNeural Tangent
-                  Kernels</a>
-              </li>
-              <li class="list-group-item">TGRS 2021:
-                <a href="https://arxiv.org/abs/2010.13975.pdf" , target="_blank">Recurrent Scattering Network Detects
-                  Metastable Behavior in Polyphonic Seismo-VolcanicSignals for
-                  Volcano Eruption Forecasting</a>
-              </li>
-              <li class="list-group-item">Proc.
-                2020: <a href="https://ieeexplore.ieee.org/document/9296823" , target="_blank">Mad Max: Affine Spline
-                  Insights Into Deep Learning</a></li>
-              <li class="list-group-item">SP Letters
-                2020:
-                <a href="https://ieeexplore.ieee.org/document/9113464" , target="_blank">Universal Frame
-                  Thresholding</a>
-              </li>
-              <li class="list-group-item">SP
-                OCEANS
-                2019:
-                <a href="https://ieeexplore.ieee.org/document/8867410" , target="_blank">Wavelet Learning by Adaptive
-                  Hermite Cubic Splines applied to Bioacoustic Chirps</a>
-              </li>
-              <li class="list-group-item">SP
-                GlobalSIP
-                2017:
-                <a href="https://ieeexplore.ieee.org/document/7905842" , target="_blank">Best Basis Selection Using
-                  Sparsity Driven Multi-Family Wavelet Transform</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <h3 class="text-center mt-3">Latest News...</h3>
-        <div class="card-deck">
-          <div class="card h-60 p-0" id="preprint_DA"></div>
-          <div class="card h-60 p-0" id="ICASSP_2022"></div>
-          <div class="card h-60" id="ICLR_magnet"></div>
-          <div class="card h-60" id="MLST"></div>
-          <div class="card h-60" id="preprint_interpolation"></div>
-          <div class="card h-60" id="preprint_inversion"></div>
-        </div>
       </div>
     </div>
-  </div>
+    <div class="btn-group fixed-bottom w-25" role="group" aria-label="Toolbar with button groups">
+      <div type="button" class="btn m-0 p-0" aria-label="First group">
+        <a href="https://twitter.com/randall_balestr" class="fa fa-twitter ml-auto mr-auto" target="_blank"></a>
+      </div>
+      <div type="button" class="btn  m-0 p-0" aria-label="Third group">
+        <a href="https://www.linkedin.com/in/randallbalestriero/" class="fa fa-linkedin ml-auto mr-auto"
+          target="_blank"></a>
+      </div>
+      <div type="button" class="btn m-0 p-0" aria-label="Fourth group">
+        <a href="https://github.com/RandallBalestriero" class="fa fa-github ml-auto mr-auto" target="_blank"></a>
+      </div>
+      <div type="button" class="btn m-0 p-0" aria-label="Fourth group">
+        <a href="https://scholar.google.com/citations?user=S1x_xqcAAAAJ&hl=en"
+          class="fa fa-graduation-cap ml-auto mr-auto" target="_blank"></a>
+      </div>
+    </div>
   </div>
 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> -->
+
   <!-- <script>
 
     var width = 1024
